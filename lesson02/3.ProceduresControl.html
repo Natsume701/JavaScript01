@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict'
+
+        var age=3;
+        // while(age<100){
+        //     age+=1;
+        //     console.log(age)
+        // }
+        /*
+
+        for (let i = 0; i < 100; i++) {
+            console.log((i))
+        }
+
+         */
+
+
+        //遍历数组
+        var age=[12,3,45,12,45,43,12,34]
+        //函数
+        age.forEach(function (value){
+            console.log((value))
+        })
+
+        //For(var index in object)
+        for (var num in age){
+            console.log(age[num])
+        }
+
+
+        new Map();
+        new Set();
+
+        //这种方法太麻烦，所以我们使用map
+        // var names = ["Rachel", "Jack", "Zack", "Tom"]
+        // var scores = [100, 110, 90, 99]
+
+
+        var map = new Map(['Tom', 100], ['Jack', 120], ['Rachel', 99])
+        var name = map.get('Tom');
+        //set: 无序不重复的集合
+        map.set('admin', 12345)
+        console.log(name);
+        //set可以去重
+        var set = new Set([3,1,2,3,5])
+        set.add(55); //添加
+        set.delete(3); //删除
+        console.log(3 in set); // 是否包含某个元素
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

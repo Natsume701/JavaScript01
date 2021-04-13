@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function add(a,b,...rest){
+        console.log("a=>"+a);
+        console.log("b=>"+b);
+        console.log(rest); //最后面
+        /*可以增加 rest去避免这个问题
+        if (arguments.length>2){ //判断有没有多余的函数
+            for (var i = 2; i<arguments.length; i++){
+
+            }
+        }
+
+         */
+    }
+</script>
+</body>
+</html>
