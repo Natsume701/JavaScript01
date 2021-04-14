@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    'use strict'
+    function  na(){
+        var x=1;
+    }
+    //x+=1;//Uncaught ReferenceError: x is not defined
+
+    function naa(){
+        var x=2;
+       // z =4;//Unresolved variable or type z
+        function nanaa(){
+            var x=4; //内部函数可以访问外部函数的成员，但是外部函数不可访问内部函数的成员
+            var z;
+        }
+    }
+
+    function funn(){
+        function fun(){
+            var x='A';
+            console.log(x);
+        }
+        console.log(x);
+        fun();
+    }
+    var x="xxx";
+    alert(x);
+    alert(window.x); //默认所有全局变量，都会绑定到windows对象下
+
+
+    //唯一全局变量
+    var Natsume={};
+
+    //定义全局变量
+    Natsume.name = 'NatsumeGuizhi'
+    Natsume.add = function (a,b){
+        return a+b;
+    }
+
+
+    function add(){
+        for (var i = 0; i < 100; i++) {
+            console.log(i);
+        }
+        console.log(i+1)//101 i除了这个作用域还可以使用，
+    }
+
+</script>
+
+</body>
+</html>
