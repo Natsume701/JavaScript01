@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../lesson05/lib/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+<ul id="text-ul">
+    <li class="js">JavaScript</li>
+    <li name=python>Python</li>
+</ul>
+
+<script>
+    //li 可以绑定属性
+    $('#test-ul li[name=python]').text();//text()没参数是取值， 有参数是设置值
+    $('#text-ul').html(); //html和text一样
+
+    //css操作
+    $('#test-ul li[name=python]').css({"color":"red"});
+
+    //元素的显示和隐藏，就是css的display：none
+    $('#text-ul li[name=python]').show();
+    $('#text-ul li[name=python]').hide();//把Python隐藏起来
+
+</script>
+</body>
+</html>
